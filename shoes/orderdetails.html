@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    .body{
+        background-color:sandybrown;
+    }
+     .details{
+        width: 800px;
+         height: 450px;
+         border: 2px solid green;
+         box-shadow: 2px 3px 2px 2px green;
+         background-color: palegoldenrod;
+       
+     }
+     .name,.address,.pin,.address2,.number{
+         font-size: 48px;
+         font-weight: bold;
+         color: cornflowerblue;
+     }
+     #text, #text2, #text4, #number1, #number2{
+         box-shadow: 2px 3px 2px 3px orange;
+         width: 300px;
+         height: 30px;
+     }
+
+     .submit{
+         width: 200px;
+         height: 40px;
+         color: black;
+         font-weight: bold;
+         font-size: 20px;
+         font-style:normal;
+         background-color: orangered;
+        margin-left: 300px;
+        margin-top: 20px;
+        
+        
+     }
+    
+    </style>
+    <script type="text/javascript">
+    function validate(){
+        var a = document.getElementById("text2").value;
+        var b= document.getElementById("text4").value;
+        if(a!=b)
+       {
+           alert("Enter same address and conform address");
+           return false;
+       }
+       else
+       {
+           alert("Order placed successfully");
+        return true;
+
+       }
+
+    }
+       
+          
+    </script>
+</head>
+<body class="body">
+<div class="details">
+    <form name="formname" onsubmit="return validate()">
+ <div class="name"> Name: <input type="text" name="text" id="text" required></div><br>
+ <div class="address">  Address: <input type="text" name="text2" id="text2" required></div><br>
+ <div class="pin"> Pin: <input type="number" name="number1" id="number1" required></div><br>
+    <div class="address2">  Conform Address: <input type="text" name="text4" id="text4" required></div><br>
+        <div class="number"> Total Cost: <input type="number" name="number2" id="number2"></div><br>
+        <input type="submit" name="submit" value="Submit Order" class="submit">
+   </form>
+</div>  
+</body>
+</html>

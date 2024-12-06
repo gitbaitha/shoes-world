@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    
+    #featured h1{   
+        text-align: center;
+        font-weight: bold;
+        font-size: 60px;
+    }
+      .header{
+          width:100%;
+          background-color: lightyellow;
+         
+        }
+      nav{
+          width:100%;
+          height:70px;
+          border-bottom: 1px solid black;
+          box-shadow: 2px 0px 5px 0px black;
+          display:flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: center;
+          background-color:rgb(22, 196, 115);
+          position: fixed;
+          top:0;
+          z-index: 1;
+        
+        
+      }
+      .Logo{
+          font-size: 50px;
+          font-weight: bold;
+      }
+      .menu1 a{
+          text-decoration: none;
+          font-size: 20px;
+          color: black;
+          padding: 10px 20px;
+          margin: 5px;
+          font-weight: bold;
+
+      }
+      .menu1 a:last-child{
+          background: black;
+          color: white;
+      }
+      .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform-style: preserve-3d;
+          transform-origin: center;
+          perspective: 2000px;
+      }
+      .left {
+           flex-basis: 50%;
+           margin-top: 100px;
+           animation: ashish 3s linear infinite;
+
+      }
+      @keyframes ashish{
+          0%{
+              transform:scale(1.1);
+          }
+          50%{
+              transform:scale(1);
+          }
+          100%{
+              transform:scale(1.1)
+          }
+      }
+      .right {
+          flex-basis: 50%;
+          max-width: 400px;
+         padding-top: 100px;
+        
+      }
+      .right h1{
+          font-size: 50px;
+      }
+      
+      .right p{
+          font-size: 25px;
+          margin: 20px 0px;
+      }
+      button{
+          font-size: 23px;
+          color:white;
+          background-color: black;
+          font-weight: bold;
+          border:none;
+          outline:none;
+          padding: 10px 20px;
+      }
+      .body1 {
+      
+          display: grid;
+          grid-template-columns: repeat(4,20%);
+          grid-auto-rows: minmax(200px,aut0);
+          grid-gap:4em;
+          justify-content: center;
+        }
+        .body1> div{
+            border:1px solid grey;
+            position: relative;
+        }
+        .body1> div img{
+            width:100%;
+            overflow:hidden;
+           
+
+        }
+        .iimg {
+            grid-row: 1/3;
+            grid-column: 1/3;
+           
+
+        }
+        .price{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: black;
+            color:white;
+            padding:5px;
+            font-size: 20px;
+        }
+        .body1> div img:hover{
+            transform:scale(1.2);
+        }
+    .man {
+        padding:20px 0px;
+    }
+    .manrow {
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        flex-basis: 15%;
+      
+     }
+     .manimg img{
+         width:100%;
+
+     }
+     .manimg{
+         box-shadow: 2px 3px 5px 2px  grey;
+         margin-left: 20px;
+         margin-right: 10px;
+         padding: 10px;
+         text-decoration: none;
+     }
+     .manimg h2{
+         margin: 20px 0px;
+         text-decoration: none;
+     }
+     .manimg h3{
+         background: black;
+         color:white;
+         padding: 10px;
+         text-decoration: none;
+     }
+     .manimg:hover{
+         transform: translatey(-20px);
+     }
+      .menS{
+        text-align: center;
+        font-weight: bold;
+        font-size: 60px;
+     }
+     .womenS{
+        text-align: center;
+        font-weight: bold;
+        font-size: 60px;
+     }
+     
+     .footer1{
+        background-color:rgb(22, 196, 115);
+         color:white;
+         text-align: center;
+         
+     }
+
+
+    </style>
+    <script type="text/javascript">
+      function span1(){
+           alert("Click on any item to buy them");
+
+      }
+    </script>
+</head>
+<body>
+   <div class="header" id="header">
+         <nav >
+             <div class="Logo">Shoes-World</div>
+             <div class="menu1" >
+               <a href="#header">Home</a>
+               <a href="#featured">Featured</a>
+               <a href="#man">Man</a>
+               <a href="#women">Women</a>
+       
+               <button onclick="span1()">shop</button>
+
+             </div>
+         </nav>
+         <div class="container">
+             <div class="left"> 
+                  <a href="js1.html"><img src="img/1.jpeg" width="500px" height="500px"></a>
+                 </div>
+             <div class="right">
+                 <h1>Hurry up!!!  </h1>
+                 <p>We are providing best quality materials.We have best quality Shoes
+                     for man and womens.
+                 </p>
+                 <p>
+                     50% Discount!!!
+                 </p>
+                 <button onclick="span1()">Shop now</button>
+            </div>
+       </div>
+       <br><br>
+       <div id="featured">
+           <h1  >Feature </h1>
+         <div class="body1">
+            <div class="iimg">
+                  <a href="js2.html"><img src="img/2.jpeg"></a> 
+                   <div class="price">Price: $60</div>
+            </div>
+            <div>
+                <a href="js3.html"> <img src="img/3.jpeg"></a>
+                   <div class="price">Price: $40</div>
+            </div>
+            <div>
+                <a href="js4.html"> <img src="img/4.jpeg"></a>
+                <div class="price">Price: $86</div>
+
+            </div>
+            <div>
+                <a href="js5.html"><img src="img/5.jpeg"></a>
+                <div class="price">Price: $110</div>
+ 
+            </div>
+            <div>
+                <a href="js6.html">  <img src="img/6.jpeg"></a>
+                <div class="price">Price: $215</div>
+
+            </div>
+        </div>
+    </div>
+    <div class="man" id="man">
+        <div class="menS">Men's Section</div>
+        <div class="manrow">
+            <a href="js7.html">  <div class="manimg">
+               <img src="img/7.jpeg" alt="">
+                <h2 >Nike Shoes<br>$58.99</h2>
+                <h3>Add to your cart </h3>
+             </div></a>
+             <div class="manimg">
+                <a href="js8.html"> <img src="img/8.jpeg" alt=""></a>
+                <h2>Puma shoes<br>$100.99</h2>
+                <h3>Add to your cart </h3>
+             </div>
+             <div class="manimg">
+                <a href="js9.html"><img src="img/9.jpeg" alt=""></a>
+                <h2>Reebox<br>$120</h2>
+                <h3>Add to your cart </h3>
+             </div> 
+             <div class="manimg">
+                <a href="js10.html"><img src="img/10.jpeg" alt=""></a>
+                <h2>Nike 234ea<br>$78.5</h2>
+                <h3>Add to your cart </h3>
+             </div>
+             <div class="manimg">
+                <a href="js11.html"><img src="img/11.jpeg" alt=""></a>
+                <h2>Mountain Shoes<br>$215</h2>
+                <h3>Add to your cart </h3>
+             </div>
+
+        </div>
+
+    </div>
+    <div id="women">
+        <div class="womenS">Women's Section</div>
+       
+    <div class="man">
+        <div class="manrow">
+            
+             <div class="manimg">
+                <a href="js12.html"> <img src="img/12.jpeg" alt=""></a>
+                <h2>Woodland girl shoes<br>$215</h2>
+                <h3>Add to your cart </h3>
+             </div>
+             <div class="manimg">
+                <a href="js13.html"> <img src="img/13.jpeg" alt=""></a>
+                <h2>Bata Shoes<br>$56</h2>
+                <h3>Add to your cart </h3>
+             </div>
+             <div class="manimg">
+                <a href="js14.html"> <img src="img/14.jpeg" alt=""></a>
+                <h2>Nike girl Shoes<br>$85</h2>
+                <h3>Add to your cart </h3>
+             </div>
+             <div class="manimg">
+                <a href="js15.html"><img src="img/15.jpeg" alt=""></a>
+                <h2>Puma Girl shoes<br>$165</h2>
+                <h3>Add to your cart </h3>
+             </div>
+
+        </div>
+
+    </div>
+</div>
+    <div class="footer1">
+        <h2>  Made with  <span>💚 </span>by Shoes-World</h2>
+   
+      </div>
+</div>    
+</body>
+</html>
